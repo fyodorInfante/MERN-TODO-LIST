@@ -6,6 +6,7 @@ dotenv.configDotenv();
 import express from "express";
 import mongoose from "mongoose";
 import cors from 'cors'
+import morgan from "morgan";
 
 // routes
 import todoRoutes from './routes/todoRoutes.js'
@@ -14,6 +15,7 @@ import todoRoutes from './routes/todoRoutes.js'
 const app = express();
 
 app.use(cors());
+app.use(morgan('tiny'));
 
 app.use(express.json());
 
